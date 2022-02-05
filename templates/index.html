@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>eCommerce Business Investment Evaluation Calculator</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+	</head>
+
+	<body>
+		<img src="http://www.easy2digital.com/wp-content/uploads/2021/11/lokiuyiui23232-Max-Quality.jpg" width=300 height="250">
+		<br>
+		<div class='container'>
+		<h1>eCommerce Business Investment Evaluation Calculator</h1>
+		<h3>Note: Smart Home Electronic's CAGR is 0.0167, and WACC is 0.0861</h3>
+		<form action="StoreUrl" method="post">
+			{% for message in get_flashed_messages()%}
+				<p>{{message}}</p>
+			{% endfor %}
+		<div class="row">
+			<div class="column">
+			<label>Cost of Good Sales(US$) - Cost of landed cost + tarriffs</label>
+			<input type="text" name="name_input">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="column">
+			<label>WACC</label>
+			<input type="text" name="WACC">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Average Order Value</label>
+			<input type="text" name="aov">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>CAGR (floating number)</label>
+			<input type="text" name="cagr">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Web Organic Traffic per year</label>
+			<input type="text" name="organicTraffic">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Web Organic Conversion Rate(floating number)</label>
+			<input type="text" name="organicCVR">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Paid Ads Traffic (Yearly)</label>
+			<input type="text" name="paidTraffic">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Paid Ads Conversion Rate(floating number)</label>
+			<input type="text" name="paidCVR">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Paid Ads CPC</label>
+			<input type="text" name="paidCPC">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Avg FulfillmentCost per Order</label>
+			<input type="text" name="fulfillmentCost">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Order Refund Rate(floating number)</label>
+			<input type="text" name="refundRate">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Payment Processing Rate(floating number)</label>
+			<input type="text" name="paymentRate">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Avg Partner Commission per Order(floating number)</label>
+			<input type="text" name="partnerCommissionRate">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Orders % from Partners</label>
+			<input type="text" name="partnerOrderPercentage">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>Initial Outlay (Upfront Investment)</label>
+			<input type="text" name="initialOutlay">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+			<label>How many years of this investment?</label>
+			<input type="text" name="YearstoInvest">
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='column'>
+				<button type="submit" class='calculate'>Calculate</button>
+			</div>
+		</div>
+
+		</form>
+		</div>
+	</body>
+</html>
